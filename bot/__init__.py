@@ -13,7 +13,7 @@ from .translation import Translation
 # Change Accordingly While Deploying To A VPS
 APP_ID = 39690918
 API_HASH = "4f1ab2b4a61d2dae7ac34db4cf7ab2f5"
-BOT_TOKEN = "8592845236:AAElwFhNYThglmBAl4z-1V4roih6xZ6xU_g"
+BOT_TOKEN = "8592845236:AAE7TwU3X60CiwF7_MaASt1n_fnMRu0ozAo"
 DB_URI = "mongodb+srv://Tonicveil:bhaimerajay98@cluster0.vmckaf5.mongodb.net/?retryWrites=true&w=majority"
 USER_SESSION = None
 
@@ -40,4 +40,5 @@ start_uptime = time.time()
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
 

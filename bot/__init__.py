@@ -11,15 +11,12 @@ from logging.handlers import RotatingFileHandler
 from .translation import Translation
 
 # Change Accordingly While Deploying To A VPS
-APP_ID = int(os.environ.get("APP_ID"))
+APP_ID = 39690918
+API_HASH = "4f1ab2b4a61d2dae7ac34db4cf7ab2f5"
+BOT_TOKEN = "8592845236:AAElwFhNYThglmBAl4z-1V4roih6xZ6xU_g"
+DB_URI = "mongodb+srv://Tonicveil:bhaimerajay98@cluster0.vmckaf5.mongodb.net/?retryWrites=true&w=majority"
+USER_SESSION = None
 
-API_HASH = os.environ.get("API_HASH")
-
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-
-DB_URI = os.environ.get("DB_URI")
-
-USER_SESSION = os.environ.get("USER_SESSION")
 
 VERIFY = {}
 
@@ -43,3 +40,4 @@ start_uptime = time.time()
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+

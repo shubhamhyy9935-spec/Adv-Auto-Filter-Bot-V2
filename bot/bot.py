@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @SpEcHIDe
 
-from pyrogram import Client, enums, __version__
-
+from pyrogram import Client, enums
 from . import API_HASH, APP_ID, LOGGER, BOT_TOKEN 
-
 from .user import User
 
 class Bot(Client):
@@ -31,9 +28,12 @@ class Bot(Client):
         bot_details = await self.get_me()
         self.set_parse_mode(enums.ParseMode.HTML)
         self.LOGGER(__name__).info(
-            f"@{bot_details.username}  started! "
+            f"@{bot_details.username} started!"
         )
-        self.USER, self.USER_ID = await User().start()
+        try:
+            self.USER, self.USER_ID = await User().start()
+        except Exception as e:
+            self.LOGGER(__name__).warning(f"Userbot failed: {e}")
 
     async def stop(self, *args):
         await super().stop()
